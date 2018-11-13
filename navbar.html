@@ -1,0 +1,43 @@
+<?php session_start();
+      $val=substr($_SESSION['program_id'],0,1);
+?>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">DELL_ENTERPRISES_INC</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+                
+             	
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="Acess.php">Logout<i class="glyphicon glyphicon-log-out"></i></a></li>
+                        
+           
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">PROGRAMS<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+             	<li class="dropdown-header">Suppliers Data</li>
+                <li><a href="load_suppliers.php">Raw_materials</a></li>
+                <li class="divider"></li>
+                <li class="dropdown-header">Retailers</li>
+                <li><a href="index.php">Goods_details</a></li>
+				<li class="dropdown-header">Managers</li>
+				<li><a href="managers.php" style="display:<?php if($val=='m'){echo'block';}else{echo'none';}?>">EBOMS</a></li>
+                
+				</ul>
+            </li>  
+			
+            <li><a href="contact.php">CONTACT</a></li>
+			<li><a href="FAQ.php">FAQ'S</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
